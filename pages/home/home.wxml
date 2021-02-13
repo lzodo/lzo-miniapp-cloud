@@ -1,0 +1,24 @@
+<view>
+	<swiper class="indexSwiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{true}}" indicator-active-color="#abc" indicator-color="#fff">
+		<swiper-item wx:for="{{background}}" wx:key="*this">
+			<view class="swiper-item">
+				<!-- mode="widthFix" 保持图片宽高比不变 -->
+				<image src="{{item.img}}" mode="widthFix"></image>
+			</view>
+		</swiper-item>
+	</swiper>
+</view>
+
+<view class="modelTitle">
+	<view class="font"><text>咖啡的故事</text></view>
+	<view class="line"></view>
+</view>
+
+
+<view class="rightspacing">
+	<scroll-view class="scroll-view_H" scroll-x="true" style="width: 100%">
+		<view class="scroll-view-item_H ">1</view>
+		<view class="scroll-view-item_H ">2</view>
+		<view class="scroll-view-item_H ">3</view>
+	</scroll-view>
+</view>

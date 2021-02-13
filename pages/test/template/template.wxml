@@ -1,0 +1,5 @@
+<!--pages/list/template/template.wxml-->
+
+<template name="temp1">
+    <text>{{aaa}}</text>
+</template>

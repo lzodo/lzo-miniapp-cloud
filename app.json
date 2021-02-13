@@ -1,12 +1,15 @@
 {
   "pages":[
-    "pages/index/index",
-    "pages/logs/logs"
+    "pages/home/home",
+    "pages/menu/menu",
+    "pages/new/new",
+    "pages/kefu/kefu",
+    "pages/test/list"
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
+    "navigationBarBackgroundColor": "#abc",
+    "navigationBarTitleText": "微信小程序",
     "navigationBarTextStyle":"black"
   },
   "style": "v2",

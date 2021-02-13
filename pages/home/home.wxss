@@ -1,0 +1,74 @@
+/* banner */
+.indexSwiper{
+    height: calc(100vw*720/1080);
+}
+.indexSwiper image{
+    width: 100vw;
+}
+.swiper-item{
+    color: #000;
+}
+
+/* 标题 */
+.modelTitle{
+    width: 100vw;
+    height: 100rpx;
+    background: #fff;
+    position: relative;
+}
+.modelTitle .line{
+    width: 45%;
+    height: 4rpx;
+    background-color: #ccc;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.modelTitle .font{
+    line-height: 100rpx;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.modelTitle .font text{
+    background: #fff;
+    display: inline-block;
+    padding: 0 25rpx;
+}
+
+
+/* 左右滑动模块 */
+.rightspacing{
+    height: 320rpx;
+    padding-left: 20rpx;
+}
+.page-section-spacing{
+    margin-top: 60rpx;
+  }
+  .scroll-view_H{
+    white-space: nowrap;
+    height: 320rpx;
+  }
+  .scroll-view-item{
+    height: 300rpx;
+  }
+  .scroll-view-item_H{
+    display: inline-block;
+    width: 300rpx;
+    height: 300rpx;
+    margin-right: 20rpx;
+    background: #fff;
+    box-shadow: 0px 1px 6px 1px #f2f2f2;
+  }
+
+
+  /*隐藏安卓上的滚动条*/
+  ::-webkit-scrollbar{
+      width: 0;
+      height: 0;
+      color: transparent;
+  }
