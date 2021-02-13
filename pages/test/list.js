@@ -21,6 +21,19 @@ Page({
         this.setData({
             flag:!this.data.flag
         })
-    }
+    },
+    goNotTabBat:function(){
+        // wx.navigateTo({
+        //     url: '/pages/new/new'
+        // });
+        wx.redirectTo({ //替换到新页面 无返回键
+            url: '/pages/new/new'
+        });
+    },
+    goTabBat:function(){
+        wx.switchTab({
+            url: '/pages/menu/menu'
+        });
+    },
     
 })

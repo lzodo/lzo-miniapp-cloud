@@ -28,6 +28,9 @@
 <!-- 显示隐藏 -->
 <text hidden="{{showHide}}">{{msg}} show</text>
 
+<!-- 跳转-->
+<button size="small" type="primary" bindtap="goNotTabBat">跳转普通页面</button>
+<button size="small" type="warn" bindtap="goTabBat">跳转TabBat</button>
 <!-- import引入模板 is与模板的那么对应-->
 <import src='./template/template.wxml' />
 <template is="temp1" data="{{aaa:'msg' }}"></template> 

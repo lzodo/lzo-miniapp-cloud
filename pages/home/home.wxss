@@ -1,13 +1,3 @@
-/* banner */
-.indexSwiper{
-    height: calc(100vw*720/1080);
-}
-.indexSwiper image{
-    width: 100vw;
-}
-.swiper-item{
-    color: #000;
-}
 
 /* 标题 */
 .modelTitle{

@@ -1,16 +1,34 @@
 {
-  "pages":[
+  "pages": [
+    "pages/test/list",
     "pages/home/home",
     "pages/menu/menu",
     "pages/new/new",
     "pages/kefu/kefu",
-    "pages/test/list"
+    "cpmponents/banner/banner"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#abc",
     "navigationBarTitleText": "微信小程序",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color":"#bfbfbf",
+    "selectedColor":"#0faeff",
+    "list": [{
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "/static/images/home.png",
+        "selectedIconPath": "/static/images/home-active.png"
+      },
+      {
+        "pagePath": "pages/menu/menu",
+        "text": "菜单",
+        "iconPath": "/static/images/collect.png",
+        "selectedIconPath": "/static/images/collect-active.png"
+      }
+    ]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"
