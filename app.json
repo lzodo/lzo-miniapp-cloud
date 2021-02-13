@@ -1,10 +1,10 @@
 {
   "pages": [
-    "pages/test/list",
+    "pages/cloud/cloud",
     "pages/home/home",
     "pages/menu/menu",
     "pages/new/new",
-    "pages/kefu/kefu",
+    "pages/test/list",
     "cpmponents/banner/banner"
   ],
   "window": {
@@ -27,6 +27,12 @@
         "text": "菜单",
         "iconPath": "/static/images/collect.png",
         "selectedIconPath": "/static/images/collect-active.png"
+      },
+      {
+        "pagePath": "pages/cloud/cloud",
+        "text": "云服务",
+        "iconPath": "/static/images/about.png",
+        "selectedIconPath": "/static/images/about-active.png"
       }
     ]
   },
