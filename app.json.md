@@ -44,5 +44,7 @@ ctrl+r 刷新
 	"navigationStyle": "custom", //去掉头部导航栏
 	"component":true, //设置当前页面为组件,不作为组件就不需要
 }
-https://www.bilibili.com/video/BV19r4y1N7Br?p=37&spm_id_from=pageDriver
+https://www.bilibili.com/video/BV19r4y1N7Br?p=37&spm_id_from=pageDriver 跳了
+
+https://www.bilibili.com/video/BV19r4y1N7Br?p=69&spm_id_from=pageDriver
 ```

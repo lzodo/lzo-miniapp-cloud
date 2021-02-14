@@ -2,7 +2,7 @@ wx.cloud.init()
 const db = wx.cloud.database()
 Page({
     data: {
-        videoSrc:"https://6c7a-lzx-student-71zol-1302071657.tcb.qcloud.la/WebGL-ThingJS%E6%95%99%E7%A8%8B%203D%E5%BC%80%E5%8F%91%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%20-%205.WebGL-ThingJS%E6%95%99%E7%A8%8B%203D%E5%BC%80%E5%8F%91%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8-5.%E6%B5%81%E7%A8%8B(Av37691017%2CP5).mp4?sign=e5cc3bdea0343d7cb012de9034328ce7&t=1613231332",
+        videoSrc:"https://6c7a-lzx-student-71zol-1302071657.tcb.qcloud.la/jv.mp4?sign=a67c44ff4ccaecbf9057ce6674398962&t=1613280059",
         src: 'xxx',
     },
     queryCloudData() {
@@ -72,6 +72,16 @@ Page({
 
 
             }
+        })
+    },
+    queryDataToCloud(){
+        wx.cloud.callFunction({
+            name:'query',
+            data:{
+                "data_name":"张",
+            }
+        }).then(res=>{
+            console.log(res)
         })
     }
 })
