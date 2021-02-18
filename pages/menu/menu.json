@@ -1,3 +1,5 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "my-banner":"/cpmponents/banner/banner"
+  }
 }

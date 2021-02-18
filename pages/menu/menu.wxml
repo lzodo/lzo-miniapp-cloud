@@ -1,2 +1,3 @@
-<!--pages/menu/menu.wxml-->
-<text>pages/menu/menu.wxml</text>
+<view>
+    <my-banner swiperArr="{{swiperArr}}"></my-banner>
+</view>

@@ -4,35 +4,42 @@
     "pages/home/home",
     "pages/menu/menu",
     "pages/new/new",
-    "pages/test/list",
+    "pages/test/test",
+    "pages/words/words",
     "cpmponents/banner/banner"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#abc",
+    "navigationBarBackgroundColor": "#fa6803",
     "navigationBarTitleText": "微信小程序",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "color":"#bfbfbf",
-    "selectedColor":"#0faeff",
+    "selectedColor":"#fa6803",
     "list": [{
         "pagePath": "pages/home/home",
         "text": "首页",
-        "iconPath": "/static/images/home.png",
-        "selectedIconPath": "/static/images/home-active.png"
+        "iconPath": "/static/images/main.png",
+        "selectedIconPath": "/static/images/main-active.png"
       },
       {
         "pagePath": "pages/menu/menu",
         "text": "菜单",
-        "iconPath": "/static/images/collect.png",
-        "selectedIconPath": "/static/images/collect-active.png"
+        "iconPath": "/static/images/menu.png",
+        "selectedIconPath": "/static/images/menu-active.png"
+      },
+      {
+        "pagePath": "pages/words/words",
+        "text": "单词",
+        "iconPath": "/static/images/word.png",
+        "selectedIconPath": "/static/images/word-active.png"
       },
       {
         "pagePath": "pages/cloud/cloud",
         "text": "云服务",
-        "iconPath": "/static/images/about.png",
-        "selectedIconPath": "/static/images/about-active.png"
+        "iconPath": "/static/images/cloud.png",
+        "selectedIconPath": "/static/images/cloud-active.png"
       }
     ]
   },

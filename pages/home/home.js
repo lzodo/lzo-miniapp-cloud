@@ -9,7 +9,7 @@ Page({
     onLoad: function () {
         var that = this
         // 使用 Mock
-        API.ajax('', function (res) {
+        API.ajax({count:5}, function (res) {
             //这里既可以获取模拟的res
             console.log(res)
             that.setData({

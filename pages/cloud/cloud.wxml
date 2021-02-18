@@ -6,5 +6,5 @@
 <button type="warn" bindtap="queryDataToCloud">调用云函数查询数据</button>
 
 <view>云视频资源</view>
-<video src="{{videoSrc}}"></video>
+<!-- <video src="{{videoSrc}}"></video> -->
 
