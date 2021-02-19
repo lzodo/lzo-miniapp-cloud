@@ -1,2 +1,4 @@
-<!--pages/signin/signin.wxml-->
-<text>pages/signin/signin.wxml</text>
+<van-cell-group>
+	<van-field model:value="{{ username }}" label="用户名" placeholder="请输入用户名" />
+	<van-field model:value="{{ pwd }}" type="password" label="密码" placeholder="请输入密码" success border="{{ false }}" />
+</van-cell-group>
