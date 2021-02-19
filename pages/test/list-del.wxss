@@ -1,4 +1,4 @@
-/* pages/list/list.wxss */
-button{
-    margin: 10rpx;
-}
+    /* pages/list/list.wxss */
+    button{
+        margin: 10rpx;
+    }
