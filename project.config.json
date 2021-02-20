@@ -26,6 +26,7 @@
 	"isGameTourist": false,
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
+	"cloudfunctionTemplateRoot": "cloudfunctionTemplate",
 	"condition": {
 		"search": {
 			"current": -1,
@@ -62,6 +63,19 @@
 					"name": "pages/new/new",
 					"pathName": "pages/new/new",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/signin/signin",
+					"pathName": "pages/signin/signin",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/signup/signup",
+					"pathName": "pages/signup/signup",
 					"scene": null
 				}
 			]

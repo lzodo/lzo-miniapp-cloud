@@ -1,2 +1,11 @@
-<!--pages/signup/signup.wxml-->
-<text>pages/signup/signup.wxml</text>
+
+<van-dialog id="van-dialog" />
+
+<van-cell-group size='large'>
+	<van-field model:value="{{ username }}" label="用户名" placeholder="请输入用户名" />
+	<van-field model:value="{{ pwd }}" type="password" label="密码" placeholder="请输入密码" success border="{{ false }}" />
+</van-cell-group>
+
+<view class="loginbtn">
+	<van-button class='van-button' type="info" bindtap="userSignUp">注 册</van-button>
+</view>

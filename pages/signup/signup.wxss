@@ -1,1 +1,9 @@
-/* pages/signup/signup.wxss */
+/* pages/signin/signin.wxss */
+.loginbtn{
+    margin-top: 50rpx;
+    display: flex;
+    justify-content: center;
+}
+.loginbtn .van-button{
+    padding: 0 100rpx;
+}

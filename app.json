@@ -17,8 +17,8 @@
     "navigationBarTextStyle": "white"
   },
   "tabBar": {
-    "color":"#bfbfbf",
-    "selectedColor":"#fa6803",
+    "color": "#bfbfbf",
+    "selectedColor": "#fa6803",
     "list": [{
         "pagePath": "pages/home/home",
         "text": "首页",
@@ -46,8 +46,8 @@
     ]
   },
   "usingComponents": {
-    "van-button": "miniprogram_npm/vant-weapp/button/index"
+    "van-button": "miniprogram_npm/vant-weapp/button/index",
+    "van-dialog": "miniprogram_npm/vant-weapp/dialog/index"
   },
-  "style": "v2",
   "sitemapLocation": "sitemap.json"
 }
