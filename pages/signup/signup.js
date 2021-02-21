@@ -1,5 +1,5 @@
 // pages/signup/signup.js
-wx.cloud.init()
+// wx.cloud.init()
 import Dialog from '../../miniprogram_npm/vant-weapp/dialog/dialog'
 
 Page({
@@ -16,14 +16,14 @@ Page({
         }
 
         wx.cloud.callFunction({
-            name: 'cloudLogins',
+            name: 'cloudLogin',
             data: {
                 "action": "signup",
                 "username":this.data.username,
                 "pwd":this.data.pwd,
             }
         }).then(res => {
-            console.log(res.result)
+            console.log(res)
         })
     },
 })

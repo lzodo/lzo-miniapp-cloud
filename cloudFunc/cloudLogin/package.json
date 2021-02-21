@@ -1,0 +1,17 @@
+{
+  "name": "cloudLogin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "js-md5": "^0.7.3",
+    "jsonwebtoken": "^8.5.1",
+    "wx-server-sdk": "^2.3.3"
+  }
+}
