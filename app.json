@@ -1,8 +1,8 @@
 {
   "pages": [
+    "pages/cloud/cloud",
     "pages/signin/signin",
     "pages/signup/signup",
-    "pages/cloud/cloud",
     "pages/home/home",
     "pages/menu/menu",
     "pages/new/new",

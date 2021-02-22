@@ -1,8 +1,7 @@
 // app.js
 App({
   onLaunch() {
-    //云配置
-    console.log("dddddd")
+    //云配置初始化
     if (!wx.cloud) {
       console.log("版本低")
     } else {
