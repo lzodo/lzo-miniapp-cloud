@@ -32,6 +32,7 @@ const _userSignUp = (event) => {
       data: {
           username: event.username,
           pwd: hashpwd,
+          openId:event.openId
       }
   })
 }

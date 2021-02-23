@@ -1,4 +1,5 @@
 // app.js
+
 App({
   onLaunch() {
     //云配置初始化
@@ -11,10 +12,39 @@ App({
       })
     }
 
-    // 展示本地存储能力
-    const logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
+    const db = wx.cloud.database()
+    // 判断用户登录情况
+    let userInfo = wx.getStorageSync('userInfo');
+    let openId = false;
+    if(userInfo){
+       openId = JSON.parse(userInfo).openId
+    }
+  
+    
+    if (!openId) {
+      wx.cloud.callFunction({
+        name: 'getUserInfo',
+        data: {}
+      }).then(res => {
+        wx.setStorageSync('openId',res.result.openid);
+        db.collection('users').where({
+          openId: res.result.openid
+        }).get().then((userdata) => {
+          if (userdata.data.length > 0) {
+            wx.navigateTo({
+              url: '/pages/signin/signin'
+            });
+          }else{
+            wx.navigateTo({
+              url: '/pages/signup/signup'
+            });
+          }
+        })
+      })
+      // wx.navigateTo({
+      //   url: '/pages/signin/signin'
+      // });
+    }
 
     // 登录
 

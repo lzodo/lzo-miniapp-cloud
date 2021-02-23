@@ -1,11 +1,32 @@
-
 <van-dialog id="van-dialog" />
+<view class="signup-type1">
+	<van-cell-group size='large'>
+		<van-field model:value="{{ username }}" label="用户名" placeholder="请输入用户名" />
+		<van-field model:value="{{ pwd }}" type="password" label="密码" placeholder="请输入密码" success border="{{ false }}" />
+	</van-cell-group>
 
-<van-cell-group size='large'>
-	<van-field model:value="{{ username }}" label="用户名" placeholder="请输入用户名" />
-	<van-field model:value="{{ pwd }}" type="password" label="密码" placeholder="请输入密码" success border="{{ false }}" />
-</van-cell-group>
+	<view class="loginbtn">
+		<van-button class='van-button' type="info" bindtap="userSignUp">账号密码注册</van-button>
+	</view>
+</view>
 
-<view class="loginbtn">
-	<van-button class='van-button' type="info" bindtap="userSignUp">注 册</van-button>
+<view class="signup-type2">
+	<van-field model:value="{{ face_username }}" label="用户名" placeholder="请输入用户名" />
+	<van-field model:value="{{ phone }}" label="电话号码" placeholder="请输入电话号码" />
+	<van-field model:value="{{ sms }}" center clearable label="短信验证码" placeholder="请输入短信验证码">
+	</van-field>
+	<van-button class='van-button' size="small" type="primary">发送验证码</van-button>
+
+	<view>
+		<text>拍摄照片：</text><switch model:checked="{{faceSignup}}" bindchange="faceSignupChange"/>
+	</view>
+	<view wx:if="{{faceSignup}}">
+		<camera style="width:150rpx;height:150rpx"></camera>
+	  <button>拍摄{{faceSignup}}</button>
+	</view>
+
+	<view class="loginbtn">
+		<van-button class='van-button' type="info" bindtap="userSignUp">刷脸注册</van-button>
+	</view>
+	
 </view>

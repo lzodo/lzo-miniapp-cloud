@@ -19,3 +19,9 @@
     align-items: center;
     width: 100%;
 }
+
+
+.signin-type2 camera{
+    width: 200rpx;
+    height: 200rpx;
+}

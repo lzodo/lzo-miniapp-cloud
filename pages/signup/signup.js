@@ -5,7 +5,15 @@ import Dialog from '../../miniprogram_npm/vant-weapp/dialog/dialog'
 Page({
     data: {
         username: "",
-        pwd: ""
+        pwd: "",
+
+        sms:"",
+        face_username:"",
+        phone:"",
+        faceSignup:true
+    },
+    faceSignupChange(e){
+        console.log(e.detail.value)
     },
     userSignUp() {
         if (!this.data.username || !this.data.pwd) {
@@ -21,6 +29,7 @@ Page({
                 "action": "signup",
                 "username":this.data.username,
                 "pwd":this.data.pwd,
+                "openId":wx.getStorageSync('openId')
             }
         }).then(res => {
             console.log(res)

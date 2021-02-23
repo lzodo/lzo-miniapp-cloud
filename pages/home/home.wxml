@@ -1,17 +1,19 @@
-<view>
-    <my-banner swiperArr="{{swiperArr}}"></my-banner>
-</view>
+<view wx:if="{{hasOpenId}}">
+	<view>
+		<my-banner swiperArr="{{swiperArr}}"></my-banner>
+	</view>
 
-<view class="modelTitle">
-	<view class="font"><text>咖啡的故事</text></view>
-	<view class="line"></view>
-</view>
+	<view class="modelTitle">
+		<view class="font"><text>咖啡的故事</text></view>
+		<view class="line"></view>
+	</view>
 
 
-<view class="rightspacing">
-	<scroll-view class="scroll-view_H" scroll-x="true" style="width: 100%">
-		<view class="scroll-view-item_H ">1</view>
-		<view class="scroll-view-item_H ">2</view>
-		<view class="scroll-view-item_H ">3</view>
-	</scroll-view>
+	<view class="rightspacing">
+		<scroll-view class="scroll-view_H" scroll-x="true" style="width: 100%">
+			<view class="scroll-view-item_H ">1</view>
+			<view class="scroll-view-item_H ">2</view>
+			<view class="scroll-view-item_H ">3</view>
+		</scroll-view>
+	</view>
 </view>
