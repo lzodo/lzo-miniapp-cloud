@@ -13,26 +13,38 @@ const db = cloud.database()
 exports.main = async (event, context) => {
   let result = "";
   switch (event.action) {
-      case "signup":
-          result = _userSignUp(event);
-          break;
-      case "signin":
-          _userSignIn();
-          break;
+    case "signup":
+      result = _userSignUp(event);
+      break;
+    case "facesignup":
+      result = _userFaceSignUp(event);
+      break;
+    case "signin":
+      _userSignIn();
+      break;
   }
   return result;
 }
 
 const _userSignIn = () => {}
+const _userFaceSignUp = (event) => {
+  return db.collection("faceusers").add({
+    data: {
+      face_username: event.face_username,
+      phone: event.phone,
+      photoPath: event.photoPath,
+      openId: event.openId
+    }
+  })
+}
 const _userSignUp = (event) => {
-  console.log('fdsfdsf')
   let hashpwd = hash(event.pwd);
 
   return db.collection("users").add({
-      data: {
-          username: event.username,
-          pwd: hashpwd,
-          openId:event.openId
-      }
+    data: {
+      username: event.username,
+      pwd: hashpwd,
+      openId: event.openId
+    }
   })
 }

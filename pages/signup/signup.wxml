@@ -13,20 +13,21 @@
 <view class="signup-type2">
 	<van-field model:value="{{ face_username }}" label="用户名" placeholder="请输入用户名" />
 	<van-field model:value="{{ phone }}" label="电话号码" placeholder="请输入电话号码" />
-	<van-field model:value="{{ sms }}" center clearable label="短信验证码" placeholder="请输入短信验证码">
+	<!-- <van-field model:value="{{ sms }}" center clearable label="短信验证码" placeholder="请输入短信验证码">
 	</van-field>
-	<van-button class='van-button' size="small" type="primary">发送验证码</van-button>
+	<van-button class='van-button' size="small" type="primary" bindtap="gitVisCode">发送验证码</van-button> -->
 
 	<view>
 		<text>拍摄照片：</text><switch model:checked="{{faceSignup}}" bindchange="faceSignupChange"/>
+		<image style="width:90rpx;height:90rpx" src="{{photoPath}}"></image>
 	</view>
 	<view wx:if="{{faceSignup}}">
 		<camera style="width:150rpx;height:150rpx"></camera>
-	  <button>拍摄{{faceSignup}}</button>
+	  <button bindtap="getPicBase64">拍摄{{faceSignup}}</button>
 	</view>
 
 	<view class="loginbtn">
-		<van-button class='van-button' type="info" bindtap="userSignUp">刷脸注册</van-button>
+		<van-button class='van-button' type="info" bindtap="faceSignupSubmit">刷脸注册</van-button>
 	</view>
 	
 </view>

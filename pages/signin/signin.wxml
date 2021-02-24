@@ -11,7 +11,7 @@
 </view>
 <view class="signin-type2">
   <camera></camera>
-	<button>刷脸登录</button>
+	<button bindtap="userFaceSignIn">刷脸登录</button>
 </view>
 
 <view class="signup" bindtap="userSignUp">新用户注册</view>
