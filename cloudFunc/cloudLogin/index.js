@@ -11,19 +11,18 @@ const db = cloud.database()
 
 // 云函数入口函数
 exports.main = async (event, context) => {
-  let result = "";
   switch (event.action) {
     case "signup":
       result = _userSignUp(event);
       break;
     case "facesignup":
       result = _userFaceSignUp(event);
+      return _userSignUp(event);
       break;
     case "signin":
       _userSignIn();
       break;
   }
-  return result;
 }
 
 const _userSignIn = () => {}
@@ -37,9 +36,9 @@ const _userFaceSignUp = (event) => {
     }
   })
 }
+const _userSignIn = () => { }
 const _userSignUp = (event) => {
   let hashpwd = hash(event.pwd);
-
   return db.collection("users").add({
     data: {
       username: event.username,
