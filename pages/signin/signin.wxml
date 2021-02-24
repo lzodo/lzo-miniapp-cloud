@@ -1,13 +1,17 @@
-
 <van-dialog id="van-dialog" />
+<view class="signin-type1">
+	<van-cell-group size='large'>
+		<van-field model:value="{{ username }}" label="用户名" placeholder="请输入用户名" />
+		<van-field model:value="{{ pwd }}" type="password" label="密码" placeholder="请输入密码" success border="{{ false }}" />
+	</van-cell-group>
 
-<van-cell-group size='large'>
-	<van-field model:value="{{ username }}" label="用户名" placeholder="请输入用户名" />
-	<van-field model:value="{{ pwd }}" type="password" label="密码" placeholder="请输入密码" success border="{{ false }}" />
-</van-cell-group>
-
-<view class="loginbtn">
-	<van-button class='van-button' type="info" bindtap="userSignIn">登 录</van-button>
+	<view class="loginbtn">
+		<van-button class='van-button' type="info" bindtap="userSignIn">密码登录</van-button>
+	</view>
+</view>
+<view class="signin-type2">
+  <camera></camera>
+	<button>刷脸登录</button>
 </view>
 
 <view class="signup" bindtap="userSignUp">新用户注册</view>

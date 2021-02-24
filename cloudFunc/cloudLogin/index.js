@@ -25,9 +25,10 @@ const _userSignIn = () => { }
 const _userSignUp = (event) => {
   let hashpwd = hash(event.pwd);
   return db.collection("users").add({
-    data: {
-      username: event.username,
-      pwd: hashpwd,
-    }
+      data: {
+          username: event.username,
+          pwd: hashpwd,
+          openId:event.openId
+      }
   })
 }
