@@ -12,39 +12,12 @@ App({
       })
     }
 
-    const db = wx.cloud.database()
-    // 判断用户登录情况
-    let userInfo = wx.getStorageSync('userInfo');
-    let openId = false;
-    if(userInfo){
-       openId = JSON.parse(userInfo).openId
-    }
-  
-    
-    if (!openId) {
-      wx.cloud.callFunction({
-        name: 'getUserInfo',
-        data: {}
-      }).then(res => {
-        wx.setStorageSync('openId',res.result.openid);
-        db.collection('users').where({
-          openId: res.result.openid
-        }).get().then((userdata) => {
-          if (userdata.data.length > 0) {
-            wx.navigateTo({
-              url: '/pages/signin/signin'
-            });
-          }else{
-            wx.navigateTo({
-              url: '/pages/signup/signup'
-            });
-          }
-        })
-      })
-      // wx.navigateTo({
-      //   url: '/pages/signin/signin'
-      // });
-    }
+
+    this.loginVis();
+
+    console.log(2)
+
+
 
     // 登录
 
@@ -73,6 +46,42 @@ App({
         }
       }
     })
+  },
+  loginVis() {
+      const db = wx.cloud.database()
+      // 判断用户登录情况
+      let userInfo = wx.getStorageSync('userInfo');
+      let openId = false;
+      if (userInfo) {
+        openId = JSON.parse(userInfo).openId
+      } else {
+        openId = false
+      }
+
+
+      if (!openId) {
+        wx.cloud.callFunction({
+          name: 'getUserInfo',
+          data: {}
+        }).then(res => {
+          wx.setStorageSync('openId', res.result.openid);
+          db.collection('users').where({
+            openId: res.result.openid
+          }).get().then((userdata) => {
+            if (userdata.data.length > 0) {
+              wx.navigateTo({
+                url: '/pages/signin/signin'
+              });
+              console.log(1)
+            } else {
+              wx.navigateTo({
+                url: '/pages/signup/signup'
+              });
+              console.log(1)
+            }
+          })
+        })
+      }
   },
   globalData: {
     userInfo: null

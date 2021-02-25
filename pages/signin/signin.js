@@ -14,6 +14,12 @@ Page({
         username: "",
         pwd: ""
     },
+    onLoad() {
+        // 绑定分享参数
+        wx.onCopyUrl(() => {
+            return { query: 'a=1&b=2' }
+        })
+    },
     userFaceSignIn() {
         let ctx = wx.createCameraContext();
         getPicFromCenavm(ctx).then((data) => {
@@ -44,9 +50,13 @@ Page({
             name: 'cloudLogin',
             data: {
                 "action": "signin",
+                "username":this.data.username,
+                "pwd":this.data.pwd,
             }
         }).then(res => {
-            console.log(res.result.event)
+            if(res.result.data.length>0){
+                
+            }
         })
     },
     userSignUp() {
