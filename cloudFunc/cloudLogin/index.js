@@ -38,6 +38,7 @@ const _userFaceSignUp = (event) => {
 }
 const _userSignIn = (event) => {
   let hashpwd = hash(event.pwd);
+
   return new Promise((reslove, reject) => {
     db.collection("users").where({
       username: event.username,
@@ -49,6 +50,7 @@ const _userSignIn = (event) => {
 }
 const _userSignUp = (event) => {
   let hashpwd = hash(event.pwd);
+  console.log(123)
   return db.collection("users").add({
     data: {
       username: event.username,

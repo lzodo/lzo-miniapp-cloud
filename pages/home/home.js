@@ -10,8 +10,10 @@ Page({
     onLoad: function () {
         var that = this;
         let userInfo = wx.getStorageSync('userInfo');
+        console.log(userInfo,234444)
         if (userInfo) {
-            openId = JSON.parse(userInfo).openId
+            let openId = JSON.parse(userInfo).openId
+
             that.setData({
                 hasOpenId: true
             })

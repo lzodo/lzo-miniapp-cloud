@@ -54,8 +54,19 @@ Page({
                 "pwd":this.data.pwd,
             }
         }).then(res => {
+            console.log(res)
             if(res.result.data.length>0){
-                
+                wx.setStorageSync('userInfo',JSON.stringify(res.result.data[0]));
+                wx.switchTab({
+                    url: '/pages/home/home',
+                    success: function () {   // 有时跳转不加载钩子函数，获取到页面后收到加载
+                        // console.log(getCurrentPages(),555555)
+                        // console.log(getCurrentPages().pop(),4444)
+                        var page = getCurrentPages().pop();
+                        if (page == undefined || page == null) return;
+                        page.onLoad();
+                    }
+                });
             }
         })
     },

@@ -1,3 +1,4 @@
 <view>
-    <my-banner swiperArr="{{swiperArr}}"></my-banner>
+    <!-- <my-banner swiperArr="{{swiperArr}}"></my-banner> -->
+    <view>菜单</view>
 </view>
