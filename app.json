@@ -1,10 +1,10 @@
 {
   "pages": [
+    "pages/menu/menu",
     "pages/home/home",
     "pages/cloud/cloud",
     "pages/signin/signin",
     "pages/signup/signup",
-    "pages/menu/menu",
     "pages/new/new",
     "pages/test/test",
     "pages/words/words",
