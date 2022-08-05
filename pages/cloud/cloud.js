@@ -7,11 +7,18 @@ Page({
     data: {
         videoSrc: "https://6c7a-lzx-student-71zol-1302071657.tcb.qcloud.la/jv.mp4?sign=a67c44ff4ccaecbf9057ce6674398962&t=1613280059",
         src: 'xxx',
+        userList:[],
     },
+    onLoad(){},
+    onShow(){},
     queryCloudData() {
         //查询users所有记录
         db.collection('users').get().then(res => {
-            console.log(res.data)
+            console.log(res.data);
+            this.setData({
+                userList:res.data
+            })
+            // 通过 this.data.userList 获取数据
         })
 
         //doc通过ID查找
@@ -24,7 +31,10 @@ Page({
         //     console.log(res.data)
         // })
     },
-    addCloudData() {
+    addCloudData(event) {
+        // event 接收页面传递的参数
+        console.log(event)
+        console.log(event.currentTarget.dataset.index)
         db.collection('users').add({
             // data 字段表示需新增的 JSON 数据
             data: {
@@ -34,7 +44,10 @@ Page({
                 age: 22,
             }
         }).then(res => {
-            console.log(res)
+            console.log(res);
+            wx.showToast({
+                title:"添加成功"
+            })
         })
     },
     editCloudData() {
