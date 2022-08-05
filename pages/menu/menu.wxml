@@ -1,6 +1,6 @@
 <view>
     <!-- <my-banner swiperArr="{{swiperArr}}"></my-banner> -->
     <view>菜单
-        <button bindtap="handlePay">支付 0.01 元</button>
+        <button>0.01</button>
     </view>
 </view>
