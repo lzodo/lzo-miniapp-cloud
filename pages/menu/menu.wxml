@@ -1,6 +1,14 @@
-<view>
+<view class="warp">
     <!-- <my-banner swiperArr="{{swiperArr}}"></my-banner> -->
-    <view>菜单
-        <button>0.01</button>
+    <view>
+        <view class="btnWarp">
+            <view class="item" wx:for="{{menuList}}" bindtap="execCmd" wx:key="code"  data-code="{{item.code}}">{{item.name}}</view>
+        </view>
     </view>
+
+    <lonlat wx:if="{{activecode=='1'}}"></lonlat>  
+    <!-- <van-popup round class="dialog" show="{{show}}" bind:close="onClose">
+        <view class="dialog-main">
+        </view>
+    </van-popup> -->
 </view>

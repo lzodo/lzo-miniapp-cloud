@@ -1,0 +1,4 @@
+<!--cpmponents/Lonlat/Lonlat.wxml-->
+<text class="lonlat">
+    经纬度123
+</text>

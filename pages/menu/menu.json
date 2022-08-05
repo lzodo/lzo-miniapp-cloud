@@ -1,5 +1,7 @@
 {
   "usingComponents": {
-    "my-banner":"/cpmponents/banner/banner"
+    "my-banner":"/cpmponents/banner/banner",
+    "lonlat":"/cpmponents/Lonlat/Lonlat",
+    "van-popup": "/miniprogram_npm/vant-weapp/popup/index"
   }
 }
