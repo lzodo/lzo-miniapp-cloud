@@ -2,6 +2,8 @@
   "usingComponents": {
     "my-banner":"/cpmponents/banner/banner",
     "lonlat":"/cpmponents/Lonlat/Lonlat",
-    "van-popup": "/miniprogram_npm/vant-weapp/popup/index"
+    "bluetooth":"/cpmponents/Bluetooth/bluetooth",
+    "van-popup": "/miniprogram_npm/vant-weapp/popup/index",
+    "van-dialog": "/miniprogram_npm/vant-weapp/dialog/index"
   }
 }

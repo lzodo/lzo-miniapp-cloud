@@ -6,7 +6,10 @@ Page({
         swiperArr: ['demo-text-1', 'demo-text-2', 'demo-text-3'],
         hasOpenId: false,
     },
-
+    onShow(){},
+    onHide(){},
+    onUnload(){},
+    onReady(){},
     onLoad: function () {
         var that = this;
         let userInfo = wx.getStorageSync('userInfo');

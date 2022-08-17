@@ -1,0 +1,9 @@
+<!--cpmponents/Bluetooth/bluetooth.wxml-->
+<view>
+    <view>{{info}}</view> <van-button type="danger" size="mini" disabled wx:if="{{info !== '未初始化蓝牙适配器'}}" bindtap="stopSearch">停止搜索</van-button>
+    <view wx:for="{{deviceList}}">
+        {{item.name}}[{{item.RSSI}}][{{item.deviceId}}]
+        <van-button type="primary" size="mini" id="{{item.deviceId}}" wx:if="{{item.connectable}}" bindtap="lanyaconnect">连 接</van-button>
+        <van-button type="primary" size="mini" disabled wx:if="{{!item.connectable}}">不可连接</van-button>
+    </view>
+</view>

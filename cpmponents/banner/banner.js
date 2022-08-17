@@ -24,30 +24,37 @@ Component({ //差异 1
             console.log(this.data.duration)
         }
     },
-    lifetimes: {
+    lifetimes: { // lifetimes 外面的 created 会被里面的覆盖
         // 组件的生命周期函数，用于声明组件的生命周期
+        created: function(){
+            console.log("在组件实例刚刚被创建时执行")
+        },
         attached: function () {
-            console.log(1)
+            console.log("在组件实例进入页面节点树时执行")
         },
         ready: function () {
-            console.log(2)
+            console.log("在组件在视图层布局完成后执行")
             this.test()
             this.setData({
                 autoplay: true
             })
         },
         moved: function () {
-            console.log(3)
+            console.log("在组件实例被移动到节点树另一个位置时执行")
         },
         detached: function () {
-            console.log(4)
+            console.log("在组件实例被从页面节点树移除时执行")
         },
     },
     pageLifetimes: {
         // 组件所在页面的生命周期函数
         show: function () {
+            console.log('组件中，页面展示')
         },
-        hide: function () {}
+        hide: function () {
+            console.log('组件中，页面隐藏')
+        },
+        resize: function () { },
     },
 })
 

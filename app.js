@@ -69,9 +69,9 @@ App({
             openId: res.result.openid
           }).get().then((userdata) => {
             if (userdata.data.length > 0) {
-              wx.navigateTo({
-                url: '/pages/signin/signin'
-              });
+            //   wx.navigateTo({
+            //     url: '/pages/signin/signin'
+            //   });
               console.log(1)
             } else {
               wx.navigateTo({

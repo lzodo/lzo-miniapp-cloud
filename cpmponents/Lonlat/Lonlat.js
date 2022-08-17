@@ -19,16 +19,6 @@ Component({
      */
     methods: {
         init(){
-            console.log(wx)
-            wx.makePhoneCall({
-                phoneNumber: '18060849356', //仅为示例，并非真实的电话号码
-                success:(res)=>{
-                    console.log(res)
-                },
-                fail:(err)=>{
-                    console.log(err)
-                }
-            })
         }
     },
     lifetimes: {
