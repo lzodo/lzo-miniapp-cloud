@@ -86,6 +86,10 @@ Page({
         })
     },
     fingerPrint() {
+        // 判断手机是否支持指纹 checkisSupp...
+        // 判断事件是否已有录好的指纹 checkisSote...
+        // startSoterAuthentication 得到结果后 云函数 verifySignature 云调用
+        
         // 生物认真，requestAuthModes 认证方式 fingerPrint 代表认证指纹
         wx.startSoterAuthentication({
             requestAuthModes: ['fingerPrint'],
