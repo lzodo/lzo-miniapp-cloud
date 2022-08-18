@@ -8,4 +8,5 @@
 
     <lonlat wx:if="{{activecode=='1'}}"></lonlat>  
     <bluetooth wx:if="{{activecode=='3'}}"></bluetooth>
+    <start-soter-auth wx:if="{{activecode=='5'}}"></start-soter-auth>
 </view>

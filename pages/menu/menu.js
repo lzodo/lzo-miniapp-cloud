@@ -23,7 +23,7 @@ Page({
             },
             {
                 code: 5,
-                name: "指纹识别"
+                name: "生物认证"
             },
             {
                 code: 6,
@@ -85,32 +85,6 @@ Page({
             }
         })
     },
-    fingerPrint() {
-        // 判断手机是否支持指纹 checkisSupp...
-        // 判断事件是否已有录好的指纹 checkisSote...
-        // startSoterAuthentication 得到结果后 云函数 verifySignature 云调用
-        
-        // 生物认真，requestAuthModes 认证方式 fingerPrint 代表认证指纹
-        wx.startSoterAuthentication({
-            requestAuthModes: ['fingerPrint'],
-            challenge: '123456',
-            authContent: '请用指纹解锁',
-            success(res) {
-                console.log(res);
-                wx.showToast({
-                    title: JSON.stringify(res),
-                    icon: 'none'
-                })
-            },
-            fail(res) {
-                wx.showToast({
-                    title: JSON.stringify(res),
-                    icon: 'none',
-                    duration: 100000
-                })
-            },
-        })
-    },
     execCmd(event) {
         this.setData({
             activecode: event.currentTarget.dataset.code,
@@ -126,9 +100,9 @@ Page({
             case 4:
                 this.scanCode()
                 break;
-            case 5:
-                this.fingerPrint();
-                break;
+            // case 5:
+            //     this.fingerPrint();
+            //     break;
             default:
                 console.log(event.currentTarget.dataset)
                 break;

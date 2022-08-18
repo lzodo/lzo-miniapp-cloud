@@ -5,7 +5,6 @@
         "pages/cloud/cloud",
         "pages/signin/signin",
         "pages/signup/signup",
-        "pages/new/new",
         "pages/test/test",
         "pages/words/words",
         "cpmponents/banner/banner"

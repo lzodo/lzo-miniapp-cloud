@@ -1,0 +1,112 @@
+// cpmponents/StartSoterAuth/StartSoterAuth.js
+Component({
+    /**
+     * 组件的属性列表
+     */
+    properties: {
+
+    },
+
+    /**
+     * 组件的初始数据
+     */
+    data: {
+
+    },
+
+    /**
+     * 组件的方法列表
+     */
+    methods: {
+        visSystem() {
+            let that = this;
+            // 判断手机支持的生物认证
+            wx.checkIsSupportSoterAuthentication({
+                success(res) {
+                    // wx.showToast({
+                    //     title: `设备支持 ${JSON.stringify(res.supportMode)}`,
+                    //     icon: 'none'
+                    // })
+                    console.log(`设备支持 ${JSON.stringify(res.supportMode)}`)
+                    if (res.supportMode.includes("fingerPrint")) {
+                        console.log("如果支持指纹验证");
+                        that.phoneRecord();
+                    }
+                    // res.supportMode = [] 不具备任何被 SOTER 支持的生物识别方式
+                    // res.supportMode = ['fingerPrint'] 只支持指纹识别
+                    // res.supportMode = ['fingerPrint', 'facial'] 支持指纹识别和人脸识别
+                },
+                fail(err) {
+                    wx.showToast({
+                        title: JSON.stringify(res.errMsg),
+                        icon: 'none'
+                    })
+                }
+            })
+        },
+        // 判断设备是否已有录好的指纹
+        phoneRecord() {
+            let that = this;
+            wx.checkIsSoterEnrolledInDevice({
+                checkAuthMode: 'fingerPrint',
+                success(res) {
+                    if (res.isEnrolled) {
+                        console.log("系统存在指纹记录") // 查询是否已经录入信息
+                        that.fingerPrint()
+                    } else {
+                        wx.showToast({
+                            title: '系统不存在指纹记录',
+                            icon: 'none'
+                        })
+                    }
+                },
+                fail(err) {
+                    console.log(err)
+                }
+            })
+        },
+        fingerPrint() {
+            // startSoterAuthentication 得到结果后 云函数 verifySignature 云调用
+            // 生物认真，requestAuthModes 认证方式 fingerPrint 代表认证指纹
+            let that = this;
+            wx.startSoterAuthentication({
+                requestAuthModes: ['fingerPrint'],
+                challenge: '123456',
+                authContent: '请用指纹解锁',
+                success(res) {
+                    console.log(res);
+                    let {
+                        resultJSON,
+                        resultJSONSignature
+                    } = res;
+                    // 通过云函数 SOTER 生物认证秘钥签名验证
+                    that.callSoterFunction(resultJSON, resultJSONSignature);
+                    // wx.showToast({
+                    //     title: JSON.stringify(res),
+                    //     icon: 'none'
+                    // })
+                },
+                fail(res) {
+                    wx.showToast({
+                        title: JSON.stringify(res),
+                        icon: 'none',
+                        duration: 100000
+                    })
+                },
+            })
+        },
+        callSoterFunction(resultJSON, resultJSONSignature) {
+            wx.cloud.callFunction({
+                name: 'soter',
+                data: {
+                    resultJSON,
+                    resultJSONSignature
+                }
+            }).then(res => {
+                let { isOk } = res.result;
+                console.log(res,333)
+                console.log(isOk,444)
+            })
+        }
+    }
+})

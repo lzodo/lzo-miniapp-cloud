@@ -1,0 +1,5 @@
+<!--cpmponents/StartSoterAuth/StartSoterAuth.wxml-->
+<view>
+    <van-button type="primary" size="small" bindtap="visSystem">指纹识别</van-button>
+    <!-- <van-button type="primary" size="small">指纹识别</van-button> -->
+</view>

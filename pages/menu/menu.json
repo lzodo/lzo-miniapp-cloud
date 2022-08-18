@@ -3,6 +3,7 @@
     "my-banner":"/cpmponents/banner/banner",
     "lonlat":"/cpmponents/Lonlat/Lonlat",
     "bluetooth":"/cpmponents/Bluetooth/bluetooth",
+    "start-soter-auth":"/cpmponents/StartSoterAuth/StartSoterAuth",
     "van-popup": "/miniprogram_npm/vant-weapp/popup/index",
     "van-dialog": "/miniprogram_npm/vant-weapp/dialog/index"
   }
