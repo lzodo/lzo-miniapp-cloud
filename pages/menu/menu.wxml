@@ -6,7 +6,8 @@
     </view>
     <van-dialog id="van-dialog" />
 
-    <lonlat wx:if="{{activecode=='1'}}"></lonlat>  
+    <user-info wx:if="{{activecode=='1'}}"></user-info>  
+    <lonlat wx:if="{{activecode=='6'}}"></lonlat>  
     <bluetooth wx:if="{{activecode=='3'}}"></bluetooth>
     <start-soter-auth wx:if="{{activecode=='5'}}"></start-soter-auth>
 </view>

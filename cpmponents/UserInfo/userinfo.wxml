@@ -1,0 +1,6 @@
+<!--cpmponents/UserInfo/userinfo.wxml-->
+<text>cpmponents/UserInfo/userinfo.wxml</text>
+
+<view>
+    <van-button type="primary" size="mini" bindtap="getUserInfo">用户信息</van-button>
+</view>

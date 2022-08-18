@@ -1,6 +1,7 @@
 {
   "usingComponents": {
     "my-banner":"/cpmponents/banner/banner",
+    "user-info":"/cpmponents/UserInfo/userinfo",
     "lonlat":"/cpmponents/Lonlat/Lonlat",
     "bluetooth":"/cpmponents/Bluetooth/bluetooth",
     "start-soter-auth":"/cpmponents/StartSoterAuth/StartSoterAuth",

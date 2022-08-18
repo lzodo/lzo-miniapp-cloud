@@ -71,7 +71,7 @@ Component({
             let that = this;
             wx.startSoterAuthentication({
                 requestAuthModes: ['fingerPrint'],
-                challenge: '123456',
+                challenge: '123456', // 为此次生物鉴权准备的用于签名的字符串关键识别信息
                 authContent: '请用指纹解锁',
                 success(res) {
                     console.log(res);
@@ -90,12 +90,14 @@ Component({
                     wx.showToast({
                         title: JSON.stringify(res),
                         icon: 'none',
-                        duration: 100000
+                        duration: 5000
                     })
                 },
             })
         },
         callSoterFunction(resultJSON, resultJSONSignature) {
+            // 需要右键云函数 soter 上传并部署所有文件，和 云端安装依赖
+            // 如果没有部署选项 ，云函数目录下安装 npm install --save wx-server-sdk@latest
             wx.cloud.callFunction({
                 name: 'soter',
                 data: {
@@ -103,9 +105,17 @@ Component({
                     resultJSONSignature
                 }
             }).then(res => {
-                let { isOk } = res.result;
-                console.log(res,333)
-                console.log(isOk,444)
+                let {
+                    isOk
+                } = res.result;
+                console.log(res, 333);
+                if (isOk) {
+                    wx.showToast({
+                        title: "云函数 生物认证秘钥签名成功",
+                        icon: 'none',
+                        duration: 5000
+                    })
+                }
             })
         }
     }

@@ -7,7 +7,7 @@ Page({
         show: false,
         menuList: [{
                 code: 1,
-                name: "经纬度"
+                name: "用户信息"
             },
             {
                 code: 2,
@@ -27,7 +27,7 @@ Page({
             },
             {
                 code: 6,
-                name: "1"
+                name: "经纬度"
             },
             {
                 code: 7,
@@ -56,9 +56,6 @@ Page({
         this.setData({
             show: false
         });
-    },
-    getLonLat() {
-        console.log('fdsafafdsa')
     },
     callPhone() {
         wx.makePhoneCall({
@@ -91,18 +88,12 @@ Page({
             show: true
         })
         switch (event.currentTarget.dataset.code) {
-            case 1:
-                this.getLonLat()
-                break;
             case 2:
                 this.callPhone()
                 break;
             case 4:
                 this.scanCode()
                 break;
-            // case 5:
-            //     this.fingerPrint();
-            //     break;
             default:
                 console.log(event.currentTarget.dataset)
                 break;
