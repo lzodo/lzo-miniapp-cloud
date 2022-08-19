@@ -1,6 +1,12 @@
 <!--cpmponents/UserInfo/userinfo.wxml-->
-<text>cpmponents/UserInfo/userinfo.wxml</text>
-
 <view>
-    <van-button type="primary" size="mini" bindtap="getUserInfo">用户信息</van-button>
+    <van-button class="btns" type="primary" size="mini" bindtap="getUserInfo">用户信息</van-button>
+    <van-button class="btns" type="primary" size="mini" bindtap="authorize">手动授权</van-button>
+    <van-button class="btns" type="primary" size="mini" bindtap="settingGUI">权限界面</van-button>
+    <van-button class="btns" type="primary" size="mini" bindtap="subscriptionsSetting">消息订阅</van-button>
+    <van-button class="btns" type="primary" size="mini" bindtap="getaddress">用户地址</van-button>
+    <van-button class="btns" type="primary" size="mini" bindtap="wechatGroup">微信群xx</van-button>
+    <view>
+        <image style="width:30px;height:30px" src="{{photo}}"></image>{{userName}}
+    </view>
 </view>
