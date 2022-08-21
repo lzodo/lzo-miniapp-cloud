@@ -1,0 +1,29 @@
+<view class="warp">
+    <view>
+        <view class="btnWarp">
+            <view class="item" wx:for="{{menuList}}" bindtap="execCmd" wx:key="code" data-code="{{item.code}}">{{item.name}}</view>
+        </view>
+        <view>
+            <view wx:if="{{activecode == 1}}">
+                1、通过 button 的 open-type 可以调用微信的各种功能
+                <view>
+                    <!-- <button>普通按钮</button> -->
+                    <button size="mini">普通按钮</button>
+                    <button type="primary" size="mini">主色调按钮</button>
+                </view>
+            </view>
+            <view wx:if="{{activecode == 2}}">
+                rich-text nodes 将html标签渲染到页面上
+                <rich-text nodes="<h1 style='color:red'>标题</h1>"></rich-text>
+            </view>
+            <view wx:if="{{activecode == 3}}">
+                默认 mode 属性为 scaleToFill 拉伸填满
+                aspectFit 保持纵横比缩放图片
+                aspectFill 保持纵横比填满，裁剪图片
+                heightFix 高度不变 宽自适应
+                widthFix  宽度不变 高自适应
+                
+            </view>
+        </view>
+    </view>
+</view>

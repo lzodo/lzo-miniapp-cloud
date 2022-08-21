@@ -1,4 +1,4 @@
-// cpmponents/UserInfo/userinfo.js
+// components/UserInfo/userinfo.js
 Component({
     /**
      * 组件的属性列表

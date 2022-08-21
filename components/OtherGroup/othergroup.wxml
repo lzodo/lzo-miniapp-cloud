@@ -1,0 +1,13 @@
+<view class="warp">
+    <view>
+        <view class="btnWarp">
+            <view class="item" wx:for="{{menuList}}" bindtap="execCmd" wx:key="code" data-code="{{item.code}}">{{item.name}}</view>
+        </view>
+        <view>
+            <view wx:if="{{activecode == 1}}">
+                长按复制内容
+                <text selectable>123456</text>
+            </view>
+        </view>
+    </view>
+</view>

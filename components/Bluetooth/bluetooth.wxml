@@ -1,4 +1,4 @@
-<!--cpmponents/Bluetooth/bluetooth.wxml-->
+<!--components/Bluetooth/bluetooth.wxml-->
 <view>
     <view>{{info}}</view> <van-button type="danger" size="mini" disabled wx:if="{{info !== '未初始化蓝牙适配器'}}" bindtap="stopSearch">停止搜索</van-button>
     <view wx:for="{{deviceList}}">

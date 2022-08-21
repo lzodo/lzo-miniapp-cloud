@@ -1,10 +1,12 @@
 {
   "usingComponents": {
-    "my-banner":"/cpmponents/banner/banner",
-    "user-info":"/cpmponents/UserInfo/userinfo",
-    "lonlat":"/cpmponents/Lonlat/Lonlat",
-    "bluetooth":"/cpmponents/Bluetooth/bluetooth",
-    "start-soter-auth":"/cpmponents/StartSoterAuth/StartSoterAuth",
+    "my-banner":"/components/banner/banner",
+    "user-info":"/components/UserInfo/userinfo",
+    "lonlat":"/components/Lonlat/Lonlat",
+    "bluetooth":"/components/Bluetooth/bluetooth",
+    "othergroup":"/components/OtherGroup/othergroup",
+    "complist":"/components/ComonentList/complist",
+    "start-soter-auth":"/components/StartSoterAuth/StartSoterAuth",
     "van-popup": "/miniprogram_npm/vant-weapp/popup/index",
     "van-dialog": "/miniprogram_npm/vant-weapp/dialog/index"
   }

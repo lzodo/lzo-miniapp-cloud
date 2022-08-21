@@ -1,4 +1,4 @@
-// cpmponents/StartSoterAuth/StartSoterAuth.js
+// components/StartSoterAuth/StartSoterAuth.js
 Component({
     /**
      * 组件的属性列表
@@ -38,7 +38,7 @@ Component({
                 },
                 fail(err) {
                     wx.showToast({
-                        title: JSON.stringify(res.errMsg),
+                        title: JSON.stringify(err.errMsg),
                         icon: 'none'
                     })
                 }

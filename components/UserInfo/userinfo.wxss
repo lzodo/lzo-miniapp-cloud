@@ -1,0 +1,11 @@
+/* components/UserInfo/userinfo.wxss */
+
+.btnswarp {
+    display: grid;
+    grid-template-columns: 40% 40%;
+}
+
+.btns {
+    /* margin: 5rpx 10rpx; */
+    margin: 0 10rpx;
+}

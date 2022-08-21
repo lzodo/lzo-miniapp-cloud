@@ -1,5 +1,5 @@
-<!--cpmponents/UserInfo/userinfo.wxml-->
-<view>
+<!--components/UserInfo/userinfo.wxml-->
+<view class="btnswarp">
     <van-button class="btns" type="primary" size="mini" bindtap="getUserInfo">用户信息</van-button>
     <van-button class="btns" type="primary" size="mini" bindtap="authorize">手动授权</van-button>
     <van-button class="btns" type="primary" size="mini" bindtap="settingGUI">权限界面</van-button>

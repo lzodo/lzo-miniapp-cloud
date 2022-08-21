@@ -1,5 +1,0 @@
-/* cpmponents/UserInfo/userinfo.wxss */
-
-.btns{
-    margin:5rpx 10rpx;
-}

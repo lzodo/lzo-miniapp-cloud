@@ -1,4 +1,4 @@
-// cpmponents/Lonlat/Lonlat.js
+// components/Lonlat/Lonlat.js
 Component({
     /**
      * 组件的属性列表

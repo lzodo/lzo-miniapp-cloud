@@ -42,7 +42,7 @@ ctrl+r 刷新
 //页面内
 {
 	"usingComponents": { //引入组件
-		"my-banner":"/cpmponents/banner/banner"
+		"my-banner":"/components/banner/banner"
 	},
 	"navigationStyle": "custom", //去掉头部导航栏
 	"component":true, //设置当前页面为组件,不作为组件就不需要

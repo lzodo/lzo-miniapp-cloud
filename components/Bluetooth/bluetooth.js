@@ -1,4 +1,4 @@
-// cpmponents/Bluetooth/bluetooth.js
+// components/Bluetooth/bluetooth.js
 Component({
     /**
      * 组件的属性列表

@@ -7,7 +7,7 @@
         "pages/signup/signup",
         "pages/test/test",
         "pages/words/words",
-        "cpmponents/banner/banner"
+        "components/banner/banner"
     ],
     "window": {
         "backgroundTextStyle": "light",
@@ -49,5 +49,6 @@
         "van-button": "miniprogram_npm/vant-weapp/button/index",
         "van-dialog": "miniprogram_npm/vant-weapp/dialog/index"
     },
+    "style":"v2",
     "sitemapLocation": "sitemap.json"
 }

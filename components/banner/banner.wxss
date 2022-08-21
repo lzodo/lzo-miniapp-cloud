@@ -1,4 +1,4 @@
-/* cpmponents/banner/banner.wxss */
+/* components/banner/banner.wxss */
 /* banner */
 .indexSwiper{
     height: calc(100vw*720/1080);

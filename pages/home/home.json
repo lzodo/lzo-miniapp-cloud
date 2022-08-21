@@ -1,6 +1,6 @@
 {
   "usingComponents": {
-    "my-banner":"/cpmponents/banner/banner"
+    "my-banner":"/components/banner/banner"
   },
   "navigationStyle": "custom" 
 }

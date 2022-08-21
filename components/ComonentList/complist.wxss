@@ -1,0 +1,25 @@
+/* components/OtherGroup/othergroup.wxss */
+
+/* pages/menu/menu.wxss */
+
+.btnWarp{
+    display: grid;
+    grid-template-columns: 33% 33% auto;
+    column-gap:10rpx;
+    row-gap:10rpx;
+    padding: 10rpx;
+}
+.btnWarp .item{
+    background: #aad3fa;
+    padding: 5rpx;
+    text-align: center;
+    color:rgb(255, 255, 255);
+}
+.btnWarp .item:active{
+    background: rgb(146, 146, 146);
+    color:#fff;
+}
+.dialog-main{
+    width: 80vw;
+    height: 80vh;
+}

@@ -31,11 +31,11 @@ Page({
             },
             {
                 code: 7,
-                name: "1"
+                name: "其他"
             },
             {
                 code: 8,
-                name: "1"
+                name: "组件"
             },
             {
                 code: 9,
