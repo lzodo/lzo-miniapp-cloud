@@ -28,6 +28,12 @@ Component({
      * 组件的方法列表
      */
     methods: {
+        handleContact(e){
+            console.log(e,'handleContact')
+        },
+        handleGetPhoneNumber(e){
+            console.log(e,'handleGetPhoneNumber')
+        },
         execCmd(event) {
             this.setData({
                 activecode: event.currentTarget.dataset.code,

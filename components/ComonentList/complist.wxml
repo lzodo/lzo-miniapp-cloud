@@ -8,8 +8,12 @@
                 1、通过 button 的 open-type 可以调用微信的各种功能
                 <view>
                     <!-- <button>普通按钮</button> -->
-                    <button size="mini">普通按钮</button>
-                    <button type="primary" size="mini">主色调按钮</button>
+                    <button type="primary" open-type="share" size="mini">触发用户转发</button>
+
+                    <button type="primary" open-type="contact" size="mini" bindcontact="handleContact" show-message-card="{{true}}" send-message-title="临时会话">打开客服会话</button>
+
+                    <button type="primary" open-type="getPhoneNumber" bindgetphonenumber="handleGetPhoneNumber">获取用户手机号</button>
+                    <button type="primary" open-type="feedback">打开意见反馈</button>
                 </view>
             </view>
             <view wx:if="{{activecode == 2}}">
