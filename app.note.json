@@ -1,0 +1,54 @@
+{
+    "pages": [
+        "pages/menu/menu",
+        "pages/home/home",
+        "pages/cloud/cloud",
+        "pages/signin/signin",
+        "pages/signup/signup",
+        "pages/test/test",
+        "pages/words/words",
+        "components/banner/banner"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fa6803",
+        "navigationBarTitleText": "微信小程序",
+        "navigationBarTextStyle": "white"
+    },
+    "tabBar": {
+        "color": "#bfbfbf",
+        "selectedColor": "#fa6803",
+        "list": [
+            {
+                "pagePath": "pages/home/home",
+                "text": "首页",
+                "iconPath": "/static/images/main.png",
+                "selectedIconPath": "/static/images/main-active.png"
+            },
+            {
+                "pagePath": "pages/menu/menu",
+                "text": "菜单",
+                "iconPath": "/static/images/menu.png",
+                "selectedIconPath": "/static/images/menu-active.png"
+            },
+            {
+                "pagePath": "pages/words/words",
+                "text": "单词",
+                "iconPath": "/static/images/word.png",
+                "selectedIconPath": "/static/images/word-active.png"
+            },
+            {
+                "pagePath": "pages/cloud/cloud",
+                "text": "云服务",
+                "iconPath": "/static/images/cloud.png",
+                "selectedIconPath": "/static/images/cloud-active.png"
+            }
+        ]
+    },
+    "usingComponents": {
+        "van-button": "miniprogram_npm/vant-weapp/button/index",
+        "van-dialog": "miniprogram_npm/vant-weapp/dialog/index"
+    },
+    "style":"v2",
+    "sitemapLocation": "sitemap.json"
+}

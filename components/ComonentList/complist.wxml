@@ -9,11 +9,12 @@
                 <view>
                     <!-- <button>普通按钮</button> -->
                     <button type="primary" open-type="share" size="mini">触发用户转发</button>
+                    <button type="primary" open-type="feedback">意见反馈(小程序后台接收)</button>
 
+                    小程序后台找到客服添加客服人员，添加成功后客服人员通过，客服小助手与用户进行交流
                     <button type="primary" open-type="contact" size="mini" bindcontact="handleContact" show-message-card="{{true}}" send-message-title="临时会话">打开客服会话</button>
 
-                    <button type="primary" open-type="getPhoneNumber" bindgetphonenumber="handleGetPhoneNumber">获取用户手机号</button>
-                    <button type="primary" open-type="feedback">打开意见反馈</button>
+                    <button type="primary" size="mini" open-type="getPhoneNumber" bindgetphonenumber="handleGetPhoneNumber">获取用户手机号（非个人开发者）</button>
                 </view>
             </view>
             <view wx:if="{{activecode == 2}}">

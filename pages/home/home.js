@@ -5,6 +5,7 @@ Page({
     data: {
         swiperArr: ['demo-text-1', 'demo-text-2', 'demo-text-3'],
         hasOpenId: false,
+        count:0
     },
     onShow(){},
     onHide(){},
@@ -17,8 +18,9 @@ Page({
         if (userInfo) {
             let openId = JSON.parse(userInfo).openId
 
-            that.setData({
-                hasOpenId: true
+            that.setData({ // 给数据赋值
+                hasOpenId: true,
+                count:this.data.count+1
             })
         }
         // 使用 Mock

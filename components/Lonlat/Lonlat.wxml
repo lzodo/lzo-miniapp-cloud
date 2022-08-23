@@ -1,4 +1,5 @@
 <!--components/Lonlat/Lonlat.wxml-->
-<text class="lonlat">
+<view class="lonlat">
     经纬度123
-</text>
+    <view class="testrpx">测试rpx</view>
+</view>
