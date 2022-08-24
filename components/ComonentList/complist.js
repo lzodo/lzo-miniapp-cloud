@@ -18,7 +18,7 @@ Component({
                 name: "button"
             },
             {code: 2,name: "rich-text"},
-            {code: 3,name: "image"},
+            {code: 3,name: "image"}
         ],
     },
     lifetimes: {

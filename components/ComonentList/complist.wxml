@@ -29,6 +29,9 @@
                 widthFix  宽度不变 高自适应
                 
             </view>
+            <view wx:if="{{activecode == 4}}">
+                
+            </view>
         </view>
     </view>
 </view>

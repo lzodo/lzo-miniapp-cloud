@@ -1,4 +1,4 @@
-{
+let json = {
     "pages": [
         "pages/menu/menu",
         "pages/home/home",
@@ -10,15 +10,20 @@
         "components/banner/banner"
     ],
     "window": {
-        "backgroundTextStyle": "light",
-        "navigationBarBackgroundColor": "#fa6803",
-        "navigationBarTitleText": "微信小程序",
-        "navigationBarTextStyle": "white"
+        "navigationBarBackgroundColor": "#fa6803", // 16进制，设置导航栏(包顶部)背景色 
+        "navigationBarTitleText": "微信小程序",  // 设置导航栏标题 
+        "navigationBarTextStyle": "white", // 设置导航栏标题颜色(white/black)
+        // 全局下拉刷新，页面 Page,onPullDownRefresh(){} 调用接口 ， wx.stopPullDownRefresh() 关闭 
+        "enablePullDownRefresh":true, 
+        "backgroundColor":"#123", // 设置下拉刷新的窗口背景
+        "backgroundTextStyle": "light", //  下拉 loading 的样式，仅支持 dark / light
+        // 全局上拉触底, 页面 Page.onReachBottom 调用接口
+        "onReachBottomDistance":50, // 页面上拉触底事件触发时距页面底部距离，单位为px。
     },
-    "tabBar": {
+    "tabBar": { // 顶部 tabbar 不会有ico
         "color": "#bfbfbf",
         "selectedColor": "#fa6803",
-        "list": [
+        "list": [ // 2 - 5 项
             {
                 "pagePath": "pages/home/home",
                 "text": "首页",
