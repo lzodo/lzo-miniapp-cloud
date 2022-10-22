@@ -1,12 +1,12 @@
 {
     "pages": [
-        "pages/menu/menu",
+        "pages/coderwhy/coderwhy",
         "pages/home/home",
+        "pages/menu/menu",
         "pages/cloud/cloud",
         "pages/signin/signin",
         "pages/signup/signup",
         "pages/test/test",
-        "pages/words/words",
         "components/banner/banner"
     ],
     "window": {
@@ -32,8 +32,8 @@
                 "selectedIconPath": "/static/images/menu-active.png"
             },
             {
-                "pagePath": "pages/words/words",
-                "text": "单词",
+                "pagePath": "pages/coderwhy/coderwhy",
+                "text": "coderwhy",
                 "iconPath": "/static/images/word.png",
                 "selectedIconPath": "/static/images/word-active.png"
             },
@@ -49,6 +49,6 @@
         "van-button": "miniprogram_npm/vant-weapp/button/index",
         "van-dialog": "miniprogram_npm/vant-weapp/dialog/index"
     },
-    "style":"v2",
+    "style": "v2",
     "sitemapLocation": "sitemap.json"
 }

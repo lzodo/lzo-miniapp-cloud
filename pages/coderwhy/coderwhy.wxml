@@ -1,0 +1,18 @@
+<!-- 数据绑定 -->
+<text>{{msg}}</text>
+
+<!-- block 类 似 template 不会渲染到页面中  ，设置key为item本身-->
+<block wx:for="{{list}}" wx:key="*this"> 
+    <view>
+        {{item}}-{{index}}
+    </view>
+</block>
+
+<!-- 事件绑定 与 数据更新 -->
+<view class="count">
+    <button size="mini" type="primary" bindtap="addevent">+</button>
+    <text>{{count}}</text>
+</view>
+
+
+
