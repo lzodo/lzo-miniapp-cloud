@@ -23,3 +23,7 @@
     width: 80vw;
     height: 80vh;
 }
+
+.container{
+    height: 120px;
+}

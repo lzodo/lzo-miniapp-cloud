@@ -1,0 +1,90 @@
+```js
+{
+    "description": "项目配置文件，详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
+    "cloudfunctionRoot": "cloudFunc/",
+    "packOptions": {
+        "ignore": [],
+        "include": []
+    },
+    "setting": {
+        "urlCheck": true,
+        "es6": true,
+        "enhance": true,
+        "postcss": true,
+        "preloadBackgroundData": false,
+        "minified": true,
+        "newFeature": true,
+        "coverView": true,
+        "nodeModules": true,
+        "autoAudits": false,
+        "showShadowRootInWxmlPanel": true,
+        "scopeDataCheck": false,
+        "uglifyFileName": false,
+        "checkInvalidKey": true,
+        "checkSiteMap": true,
+        "uploadWithSourceMap": true,
+        "compileHotReLoad": false,
+        "lazyloadPlaceholderEnable": false,
+        "useMultiFrameRuntime": true,
+        "useApiHook": true,
+        "useApiHostProcess": true,
+        "babelSetting": {
+            "ignore": [],
+            "disablePlugins": [],
+            "outputPath": ""
+        },
+        "enableEngineNative": false,
+        "useIsolateContext": true,
+        "userConfirmedBundleSwitch": false,
+        "packNpmManually": false,
+        "packNpmRelationList": [],
+        "minifyWXSS": true,
+        "disableUseStrict": false,
+        "showES6CompileOption": false,
+        "useCompilerPlugins": false,
+        "minifyWXML": true,
+        "useStaticServer": true
+    },
+    "compileType": "miniprogram",
+    "libVersion": "2.17.0", // 基础库版本（文档中组件最后提到的最低版本）
+    "appid": "wx3ffcef9fc255b0bc",
+    "projectname": "pro-smallapp-cloud",
+    "simulatorType": "wechat",
+    "simulatorPluginLibVersion": {},
+    "cloudfunctionTemplateRoot": "cloudfunctionTemplate/",
+    "condition": {
+        "miniprogram": {
+            "list": [
+                {
+                    "name": "pages/test/test",
+                    "pathName": "pages/test/test",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/new/new",
+                    "pathName": "pages/new/new",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/signin/signin",
+                    "pathName": "pages/signin/signin",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/signup/signup",
+                    "pathName": "pages/signup/signup",
+                    "query": "",
+                    "scene": null
+                }
+            ]
+        }
+    },
+    "editorSetting": {
+        "tabIndent": "insertSpaces",
+        "tabSize": 4
+    }
+}
+```

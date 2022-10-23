@@ -1,1 +1,14 @@
 /* pages/coderwhy/coderwhy.wxss */
+
+/* WXSS 单前页面局部样式 */
+/* 支持的选择器 .class #id ele ele,ele2 ::after ::before */
+.testcmp {
+    color: #f00;
+}
+
+/* rpx 的使用 px转rpx(750/屏幕宽度) 250宽度设计稿中50px的盒子就有设置 (750/250)*50rpx/
+.rpxset{
+    width: 750rpx;
+    height: 120px;
+    background: #0f0;
+}

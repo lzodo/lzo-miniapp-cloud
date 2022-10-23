@@ -1,5 +1,5 @@
 <!-- 数据绑定 -->
-<text>{{msg}}</text>
+<text class="testcmp">{{msg}}</text>
 
 <!-- block 类 似 template 不会渲染到页面中  ，设置key为item本身-->
 <block wx:for="{{list}}" wx:key="*this"> 
@@ -13,6 +13,24 @@
     <button size="mini" type="primary" bindtap="addevent">+</button>
     <text>{{count}}</text>
 </view>
+
+<!-- 常用组件 Text 类似 span-->
+<text user-select="{{true}}">存放普通文本</text> <!--user-select 文本是否可选 -->
+<text decode>存放普通文本</text> <!--是否解析 &gt; 这样的编码 -->
+<!-- button 大小 类型 加载中 -->
+<button>块元素按钮</button>
+<button size="mini" type="primary" plain disabled>mini 按钮 变 行内块</button>
+<button size="mini" type="warn">mini 按钮 变 行内块</button>
+
+<!-- 常用组件 View 类似 div-->
+ 
+<!-- input 双向绑定-->
+<input type="text" model:value="{{msg}}"/>
+<!-- rpx -->
+<view class="rpxset"></view>
+<!-- -->
+
+
 
 
 

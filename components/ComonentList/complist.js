@@ -18,8 +18,10 @@ Component({
                 name: "button"
             },
             {code: 2,name: "rich-text"},
-            {code: 3,name: "image"}
+            {code: 3,name: "image"},
+            {code: 4,name: "scroll-view"}
         ],
+        chooseUrl:'',
     },
     lifetimes: {
 
@@ -28,6 +30,43 @@ Component({
      * 组件的方法列表
      */
     methods: {
+        toBottomOrRight(){
+            console.log('到最低部或右边了')
+        },
+        toTopOrLeft(){
+            console.log('到最顶部或左边了');
+        },
+        onScroll(event){
+            // console.log('发生了滚动')
+        },
+        getUserInfo1(event){
+            console.log(event) // 信息不忘在
+        },
+        getUserInfo2(event){
+            // 调用api 获取用户信息,需要用户授权
+            // wx.getUserProfile({
+            //   desc: 'desc',
+            //   success:(res)=>{
+            //       console.log(res)
+            //   }
+            // })
+            wx.getUserProfile({
+              desc: 'desc',
+            }).then((res)=>{
+                console.log(res)
+            })
+        },
+        selectImage(){
+            // 上传图片 视频等媒体文件
+            wx.chooseMedia({
+              camera: 'image',
+            }).then((res)=>{
+                console.log(res);
+                this.setData({
+                    chooseUrl:res.tempFiles[0].tempFilePath
+                })
+            })
+        },
         handleContact(e){
             console.log(e,'handleContact')
         },

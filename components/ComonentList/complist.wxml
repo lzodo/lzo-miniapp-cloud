@@ -9,6 +9,8 @@
                 <view>
                     <!-- <button>普通按钮</button> -->
                     <button type="primary" open-type="share" size="mini">触发用户转发</button>
+                    <button type="primary" open-type="getUserInfo" size="mini" bindgetuserinfo="getUserInfo1">获取用户信息(没用)</button>
+                    <button type="primary" open-type="getUserInfo" size="mini" bindtap="getUserInfo2">获取用户信息</button>
                     <button type="primary" open-type="feedback">意见反馈(小程序后台接收)</button>
 
                     小程序后台找到客服添加客服人员，添加成功后客服人员通过，客服小助手与用户进行交流
@@ -23,14 +25,28 @@
             </view>
             <view wx:if="{{activecode == 3}}">
                 默认 mode 属性为 scaleToFill 拉伸填满
-                aspectFit 保持纵横比缩放图片
                 aspectFill 保持纵横比填满，裁剪图片
                 heightFix 高度不变 宽自适应
+
+                aspectFit 保持纵横比缩放图片
                 widthFix  宽度不变 高自适应
-                
+                <!-- /开通表示根目录 默认 320*240-->
+                <image src="http://114.115.212.129/static/image/Snipaste_2021-06-22_21-13-56.jpg" mode='widthFix'/>
+                <button bindtap="selectImage">选中图片</button>
+                <image src="{{chooseUrl}}" mode='widthFix'/>
             </view>
             <view wx:if="{{activecode == 4}}">
-                
+                <!--如果内部使用flex布局 要用 enable-flex  属性使它生效-->
+                <scroll-view 
+                    class="container scroll-x" 
+                    scroll-y
+                    enable-flex 
+                    bindscrolltoupper="toTopOrLeft" 
+                    bindscrolltolower="toBottomOrRight"
+                    bindscroll="onScroll"
+                >
+                    <view wx:for="{{50}}" wx:key="*this">{{item}}</view>
+                </scroll-view>
             </view>
         </view>
     </view>
