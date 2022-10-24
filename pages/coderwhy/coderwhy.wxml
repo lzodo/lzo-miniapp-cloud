@@ -28,8 +28,28 @@
 <input type="text" model:value="{{msg}}"/>
 <!-- rpx -->
 <view class="rpxset"></view>
-<!-- -->
+<!-- WXS 语法 -->
 
+<wxs module='count'>
+    function add(a,b){
+        return a+b;
+    }
+    //必须使用 CommonJs导出才能使用
+    module.exports = {
+        addvalue:add
+    }
+</wxs>
+<view>{{count.addvalue(1,2)}}</view>
+
+<!-- 事件 https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxml/event.html -->
+<view bindtap="bindEvent" data-name='name'>点击事件</view> <!--参数传递-->
+<view bindlongpress="bindEvent">长按事件</view> 
+<view></view>
+
+
+<!--  组件 -->
+<coderwhy-cpn title="组件传入标题"></coderwhy-cpn>
+<coderwhy-cpn title="组件传出数据案例" bind:titleclick="cpntitleclick"></coderwhy-cpn>
 
 
 

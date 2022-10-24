@@ -1,5 +1,7 @@
 {
-    "usingComponents": {},
+    "usingComponents": {
+        "coderwhy-cpn":"/components/CoderwhyCpn/CoderwhyCpn"
+    },
     "backgroundColor":"#ccc", 
     "enablePullDownRefresh":true
 }
