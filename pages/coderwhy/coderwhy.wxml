@@ -2,7 +2,7 @@
 <text class="testcmp">{{msg}}</text>
 
 <!-- block 类 似 template 不会渲染到页面中  ，设置key为item本身-->
-<block wx:for="{{list}}" wx:key="*this"> 
+<block wx:for="{{list}}" wx:key="*this">
     <view>
         {{item}}-{{index}}
     </view>
@@ -15,42 +15,50 @@
 </view>
 
 <!-- 常用组件 Text 类似 span-->
-<text user-select="{{true}}">存放普通文本</text> <!--user-select 文本是否可选 -->
-<text decode>存放普通文本</text> <!--是否解析 &gt; 这样的编码 -->
+<text user-select="{{true}}">存放普通文本</text>
+<!--user-select 文本是否可选 -->
+<text decode>存放普通文本</text>
+<!--是否解析 &gt; 这样的编码 -->
 <!-- button 大小 类型 加载中 -->
 <button>块元素按钮</button>
 <button size="mini" type="primary" plain disabled>mini 按钮 变 行内块</button>
 <button size="mini" type="warn">mini 按钮 变 行内块</button>
 
 <!-- 常用组件 View 类似 div-->
- 
+
 <!-- input 双向绑定-->
-<input type="text" model:value="{{msg}}"/>
+<input type="text" model:value="{{msg}}" />
 <!-- rpx -->
 <view class="rpxset"></view>
 <!-- WXS 语法 -->
 
 <wxs module='count'>
-    function add(a,b){
-        return a+b;
+    function add(a, b) {
+        return a + b;
     }
     //必须使用 CommonJs导出才能使用
     module.exports = {
-        addvalue:add
+        addvalue: add
     }
 </wxs>
 <view>{{count.addvalue(1,2)}}</view>
 
 <!-- 事件 https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxml/event.html -->
-<view bindtap="bindEvent" data-name='name'>点击事件</view> <!--参数传递-->
-<view bindlongpress="bindEvent">长按事件</view> 
-<view></view>
+<view bindtap="bindEvent" data-name='name'>点击事件</view><!--参数传递-->
+<view bindlongpress="bindEvent">长按事件</view>
+<view bindtouchend="bindEvent">触摸事件</view>
+<!-- 事件的冒泡和捕获 -->
+ <!--默认就是冒泡 v3tap v2tap v1tap 这样执行的-->
+<!--这里设置成捕获执行v1tap v2tap v3tap-->
+<view class="v1" bindtap='v1tap' capture-bind:tap="v1tap">
+    <view class="v2" bindtap='v2tap' capture-bind:tap="v2tap">
+        <view class="v3" bindtap='v3tap' capture-bind:tap="v3tap">
+        </view>
+    </view>
+</view>
 
 
 <!--  组件 -->
 <coderwhy-cpn title="组件传入标题"></coderwhy-cpn>
 <coderwhy-cpn title="组件传出数据案例" bind:titleclick="cpntitleclick"></coderwhy-cpn>
-
-
-
-
+<coderwhy-cpn title="样式传递,外面写好的class" info='outclass'></coderwhy-cpn>

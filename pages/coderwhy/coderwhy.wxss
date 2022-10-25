@@ -6,9 +6,14 @@
     color: #f00;
 }
 
-/* rpx 的使用 px转rpx(750/屏幕宽度) 250宽度设计稿中50px的盒子就有设置 (750/250)*50rpx/
+/* rpx 的使用 px转rpx(750/屏幕宽度) 250宽度设计稿中50px的盒子就有设置 (750/250)*50rpx*/
 .rpxset{
     width: 750rpx;
     height: 120px;
     background: #0f0;
+}
+
+/* 准备传到组件中的累 */
+.outclass{
+    color:#00f;
 }

@@ -5,10 +5,15 @@ Component({
      */
     properties: { 
         title:{
-            type:String,
+            type:String, //null 不限制类型 
             value:"默认标题"
         }
     },
+
+     /**
+     * 接收外部的class
+     */
+    externalClasses:['info'], // 接收外面传进来的累
 
     /**
      * 组件的初始数据，组件自己的数据

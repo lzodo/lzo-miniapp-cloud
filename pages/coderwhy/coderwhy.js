@@ -61,6 +61,12 @@ Page({
          *      event.currentTarget.dataset.name 获取参数
          *      如果 绑定点击事件的组件 就是点击的组件，两个属性没区别
          *      如果 点击的组件，是绑定事件组件 内部的组件，那么 event.target 的属性就是内部盒子的信息
+         * 
+         * event.changedTouches （改变的触摸点信息）
+         * event.touches （存在的触摸点信息）
+         *      这两个属性一般是一样的
+         *          在多指操作时不同(一开始两个手指触摸，这时是一样的，不放开又来三个手指触摸，这时changedTouches只有后面的三个手指信息)
+         *                         (一开始两个手指，离开了一个手指，这时changedTouches)
          *     
          * mark 数据标记对象 
          */
