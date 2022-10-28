@@ -1,0 +1,8 @@
+/* components/MySlot/MySlot.wxss */
+
+.defaultShow{
+    display: none;
+}
+.slotwarp:empty + .defaultShow{
+    display: block;
+}

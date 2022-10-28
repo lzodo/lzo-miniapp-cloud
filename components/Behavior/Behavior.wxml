@@ -1,0 +1,4 @@
+<!--components/Behavior/Behavior.wxml-->
+<text>--------------------混入-mixins---behaviors-----------------</text>
+<text>混入数据 {{mixinsCount}}</text>
+<button size="mini" type="primary" bindtap="increment">调用mixins方法</button>

@@ -1,8 +1,8 @@
 /* components/CoderwhyCpn/CoderwhyCpn.wxss */
-
+/* 
 view{
     color:#f00;
-}
+} */
 
 .testcmp{
     color: #f0f !important;

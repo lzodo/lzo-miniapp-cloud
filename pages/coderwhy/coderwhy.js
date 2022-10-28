@@ -6,7 +6,7 @@ Page({
     data: {
         msg: 'message',
         list: ['1', '2', '3'],
-        count: 0,
+        count: 0
     },
 
     // 什么周期函数，页面什么周期监听页面加载
@@ -76,5 +76,11 @@ Page({
     // 获取组件中传出的数据
     cpntitleclick(event) {
         console.log("监听到组件标题点击事件，并传出数据" + event.detail)
+    },
+
+    // 调用组件中的方法
+    execCpnFunc(){
+        const tabControl = this.selectComponent(".codecpn");
+        tabControl.CpnFunc(); // 操作组件中的内容
     }
 })

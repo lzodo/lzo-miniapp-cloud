@@ -32,7 +32,7 @@
 <view class="rpxset"></view>
 <!-- WXS 语法 -->
 
-<wxs module='count'>
+<wxs module='countmodel'>
     function add(a, b) {
         return a + b;
     }
@@ -41,14 +41,14 @@
         addvalue: add
     }
 </wxs>
-<view>{{count.addvalue(1,2)}}</view>
+<view>{{countmodel.addvalue(1,2)}}</view>
 
 <!-- 事件 https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxml/event.html -->
 <view bindtap="bindEvent" data-name='name'>点击事件</view><!--参数传递-->
 <view bindlongpress="bindEvent">长按事件</view>
 <view bindtouchend="bindEvent">触摸事件</view>
 <!-- 事件的冒泡和捕获 -->
- <!--默认就是冒泡 v3tap v2tap v1tap 这样执行的-->
+<!--默认就是冒泡 v3tap v2tap v1tap 这样执行的-->
 <!--这里设置成捕获执行v1tap v2tap v3tap-->
 <view class="v1" bindtap='v1tap' capture-bind:tap="v1tap">
     <view class="v2" bindtap='v2tap' capture-bind:tap="v2tap">
@@ -59,6 +59,22 @@
 
 
 <!--  组件 -->
-<coderwhy-cpn title="组件传入标题"></coderwhy-cpn>
-<coderwhy-cpn title="组件传出数据案例" bind:titleclick="cpntitleclick"></coderwhy-cpn>
-<coderwhy-cpn title="样式传递,外面写好的class" info='outclass'></coderwhy-cpn>
+<coderwhy-cpn title="-----组件传入标题-----"></coderwhy-cpn>
+<coderwhy-cpn title="-----组件传出数据案例-----" bind:titleclick="cpntitleclick"></coderwhy-cpn>
+<coderwhy-cpn title="-----样式传递,外面写好的class-----" info='outclass'></coderwhy-cpn>
+
+
+<!--  调用组件找那个的方法 -->
+<coderwhy-cpn class="codecpn" title="-----调用组件中的方法-----"></coderwhy-cpn>
+<button size="mini" bindtap="execCpnFunc">调用</button>
+
+<!-- 插槽 -->
+ <my-slot>
+    <button size="mini">外面插入的按钮</button>
+ </my-slot>
+
+ <!-- 组件混入 -->
+ <behavior></behavior>
+
+  <!-- 组件什么周期 -->
+  <lifetime></lifetime>

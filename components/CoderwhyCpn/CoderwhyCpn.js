@@ -30,5 +30,8 @@ Component({
             console.log("传出数据到外部")
             this.triggerEvent("titleclick",'datastrval')
         },
+        CpnFunc(){
+            console.log("被人外面调用了")
+        },
     }
 })

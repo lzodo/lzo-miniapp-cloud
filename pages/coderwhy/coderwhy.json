@@ -1,6 +1,9 @@
 {
     "usingComponents": {
-        "coderwhy-cpn":"/components/CoderwhyCpn/CoderwhyCpn"
+        "coderwhy-cpn":"/components/CoderwhyCpn/CoderwhyCpn",
+        "my-slot":"/components/MySlot/MySlot",
+        "behavior":"/components/Behavior/Behavior",
+        "lifetime":"/components/Lifetime/Lifetime"
     },
     "backgroundColor":"#ccc", 
     "enablePullDownRefresh":true

@@ -1,0 +1,20 @@
+<!--components/MySlot/MySlot.wxml-->
+<view>
+    slot inner
+    <view>下面是插槽 </view>
+    <view class="slotwarp">
+        <slot></slot> <!--不支持直接设置默认值-->
+    </view>
+    <view class="defaultShow">用户没有使用插槽</view>
+</view>
+
+<view>
+多插槽
+里面多个slot 设置 name
+
+外面插入的时候给么个组件添加 slot="namexxx" 来管理
+配置里
+options:{
+    multipleSlots:true
+}
+</view>
