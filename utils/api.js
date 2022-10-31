@@ -17,9 +17,13 @@ function ajax(data = '', fn, method = "get", header = {}) {
             method: method ? method : 'get',
             data: {},
             header: header ? header : { "Content-Type": "application/json" },
+            timeout:10000, // 超时事件默认600000
+            // dataType:"", // 希望服务器返回数据的格式
+            // responseType:"", // 实际服务器响应数据的类型
             success: function (res) {
                 fn(res);
-            }
+            },
+            fail: function(err){},
         });
     } else {
         // 模拟数据

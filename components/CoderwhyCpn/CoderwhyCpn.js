@@ -20,6 +20,9 @@ Component({
      */
     data: {
         // title: " ----组件标题---",
+        info:{
+            name:"123"
+        }
     },
 
     /**
@@ -33,5 +36,39 @@ Component({
         CpnFunc(){
             console.log("被人外面调用了")
         },
+    },
+
+     /**
+     * 组件定义一下额外选项
+     */
+    options:{
+
+    },
+
+    /**
+     * 组件的生命周期
+     */
+    lifetimes:{
+        created() {},
+        attached() {},
+        ready() {},
+        detached() {},
+        moved(){}, // 组件实例被移动到家节点树的其他位置
+        error(){} // 组件方法排除错误时候  v2.4.1
+    },
+     /**
+     * 引入组件的页面的生命周期
+     */
+    pageLifetimes:{
+        show(){}
+    },
+
+    /**
+     * 监听器，监听某个属性的改变
+     */
+    observers:{
+        "info.name":function(newVal,oldVal){
+            console.log(newVal)
+        }
     }
 })
