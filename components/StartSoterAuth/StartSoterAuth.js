@@ -98,25 +98,26 @@ Component({
         callSoterFunction(resultJSON, resultJSONSignature) {
             // 需要右键云函数 soter 上传并部署所有文件，和 云端安装依赖
             // 如果没有部署选项 ，云函数目录下安装 npm install --save wx-server-sdk@latest
-            wx.cloud.callFunction({
-                name: 'soter',
-                data: {
-                    resultJSON,
-                    resultJSONSignature
-                }
-            }).then(res => {
-                let {
-                    isOk
-                } = res.result;
-                console.log(res, 333);
-                if (isOk) {
-                    wx.showToast({
-                        title: "云函数 生物认证秘钥签名成功",
-                        icon: 'none',
-                        duration: 5000
-                    })
-                }
-            })
+            
+            // wx.cloud.callFunction({
+            //     name: 'soter',
+            //     data: {
+            //         resultJSON,
+            //         resultJSONSignature
+            //     }
+            // }).then(res => {
+            //     let {
+            //         isOk
+            //     } = res.result;
+            //     console.log(res, 333);
+            //     if (isOk) {
+            //         wx.showToast({
+            //             title: "云函数 生物认证秘钥签名成功",
+            //             icon: 'none',
+            //             duration: 5000
+            //         })
+            //     }
+            // })
         }
     }
 })

@@ -3,7 +3,6 @@
         "pages/coderwhy/coderwhy",
         "pages/home/home",
         "pages/menu/menu",
-        "pages/cloud/cloud",
         "pages/signin/signin",
         "pages/signup/signup",
         "pages/test/test",
@@ -38,8 +37,8 @@
                 "selectedIconPath": "/static/images/word-active.png"
             },
             {
-                "pagePath": "pages/cloud/cloud",
-                "text": "云服务",
+                "pagePath": "pages/test/test",
+                "text": "测试",
                 "iconPath": "/static/images/cloud.png",
                 "selectedIconPath": "/static/images/cloud-active.png"
             }

@@ -9,7 +9,6 @@ Page({
     data: {
         username: "",
         pwd: "",
-
         sms: "",
         face_username: "",
         phone: "",
@@ -31,21 +30,21 @@ Page({
     },
     faceSignupSubmit(option) {
         if (this.data.face_username && this.data.phone && this.data.photoPath) {
-            wx.cloud.callFunction({
-                name: 'cloudLogin',
-                data: {
-                    "action": "facesignup",
-                    "face_username": this.data.face_username,
-                    "phone": this.data.phone,
-                    "photoPath": this.data.photoPath,
-                    "openId": wx.getStorageSync('openId')
-                }
-            }).then(res => {
-                console.log(res)
-                wx.navigateTo({
-                  url: '/pages/signin/signin',
-                })
-            })
+            // wx.cloud.callFunction({
+            //     name: 'cloudLogin',
+            //     data: {
+            //         "action": "facesignup",
+            //         "face_username": this.data.face_username,
+            //         "phone": this.data.phone,
+            //         "photoPath": this.data.photoPath,
+            //         "openId": wx.getStorageSync('openId')
+            //     }
+            // }).then(res => {
+            //     console.log(res)
+            //     wx.navigateTo({
+            //       url: '/pages/signin/signin',
+            //     })
+            // })
         }
     },
     //获取照片

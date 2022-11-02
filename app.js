@@ -3,14 +3,14 @@
 App({
     onLaunch() {
         //云配置初始化
-        if (!wx.cloud) {
-            console.log("版本低")
-        } else {
-            wx.cloud.init({
-                env: "lzx-student-71zol",
-                traceUser: true
-            })
-        }
+        // if (!wx.cloud) {
+        //     console.log("版本低")
+        // } else {
+        //     wx.cloud.init({
+        //         env: "lzx-student-71zol",
+        //         traceUser: true
+        //     })
+        // }
         this.loginVis();
         // 登录
         wx.login({
@@ -45,7 +45,7 @@ App({
         console.log("小程序生命周期，切换到前台");
     },
     loginVis() {
-        const db = wx.cloud.database()
+        // const db = wx.cloud.database()
         // 判断用户登录情况
         let userInfo = wx.getStorageSync('userInfo');
         let openId = false;
@@ -56,29 +56,26 @@ App({
         }
 
 
-        if (!openId) {
-            wx.cloud.callFunction({
-                name: 'getUserInfo',
-                data: {}
-            }).then(res => {
-                wx.setStorageSync('openId', res.result.openid);
-                db.collection('users').where({
-                    openId: res.result.openid
-                }).get().then((userdata) => {
-                    if (userdata.data.length > 0) {
-                        //   wx.navigateTo({
-                        //     url: '/pages/signin/signin'
-                        //   });
-                        console.log(1)
-                    } else {
-                        wx.navigateTo({
-                            url: '/pages/signup/signup'
-                        });
-                        console.log(1)
-                    }
-                })
-            })
-        }
+        // if (!openId) {
+        //     wx.cloud.callFunction({
+        //         name: 'getUserInfo',
+        //         data: {}
+        //     }).then(res => {
+        //         wx.setStorageSync('openId', res.result.openid);
+        //         db.collection('users').where({
+        //             openId: res.result.openid
+        //         }).get().then((userdata) => {
+        //             if (userdata.data.length > 0) {
+        //                 console.log(1)
+        //             } else {
+        //                 wx.navigateTo({
+        //                     url: '/pages/signup/signup'
+        //                 });
+        //                 console.log(1)
+        //             }
+        //         })
+        //     })
+        // }
     },
     globalData: {
         token:'token.123456',
