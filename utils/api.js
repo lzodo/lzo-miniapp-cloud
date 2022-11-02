@@ -17,13 +17,13 @@ function ajax(data = '', fn, method = "get", header = {}) {
             method: method ? method : 'get',
             data: {},
             header: header ? header : { "Content-Type": "application/json" },
-            timeout:10000, // 超时事件默认600000
+            timeout: 10000, // 超时事件默认600000
             // dataType:"", // 希望服务器返回数据的格式
             // responseType:"", // 实际服务器响应数据的类型
             success: function (res) {
                 fn(res);
             },
-            fail: function(err){},
+            fail: function (err) { },
         });
     } else {
         // 模拟数据
@@ -33,7 +33,7 @@ function ajax(data = '', fn, method = "get", header = {}) {
             'error_msg': 'ok',
             'data|10': [{
                 'id|+1': 1,
-                'img':"@image(1080x720)",
+                'img': "@image(1080x720)",
             }]
         })
         // 输出结果
@@ -41,6 +41,32 @@ function ajax(data = '', fn, method = "get", header = {}) {
         fn(res);
     }
 }
-module.exports = {
-    ajax: ajax
+
+// promise封装
+const PRRequire = (options) => {
+    return new Promise((resolve, reject) => {
+        wx.require({
+            ...options,
+            success: (res) => {
+                resolve(res);
+            },
+            fail: (err) => {
+                reject(err);
+            }
+        })
+    })
 }
+
+// 类
+class HYRequest {
+
+}
+
+const hyReqInstance = new HYRequest();
+module.exports = {
+    ajax: ajax,
+    PRRequire:PRRequire,
+    hyReqInstance: hyReqInstance
+}
+
+
