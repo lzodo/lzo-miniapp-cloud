@@ -59,7 +59,11 @@ const PRRequire = (options) => {
 
 // 类
 class HYRequest {
-
+    request(options){
+        return new Promise((resolve,reject)=>{
+            
+        })
+    }
 }
 
 const hyReqInstance = new HYRequest();
