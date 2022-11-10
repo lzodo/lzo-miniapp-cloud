@@ -8,6 +8,11 @@
         "pages/test/test",
         "components/banner/banner"
     ],
+    "permission": {
+        "scope.userLocation": {
+            "desc": "需要获取您的位置信息"
+        }
+    },
     "window": {
         "backgroundTextStyle": "light",
         "navigationBarBackgroundColor": "#fa6803",

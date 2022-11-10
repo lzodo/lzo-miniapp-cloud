@@ -16,6 +16,9 @@
                     小程序后台找到客服添加客服人员，添加成功后客服人员通过，客服小助手与用户进行交流
                     <button type="primary" open-type="contact" size="mini" bindcontact="handleContact" show-message-card="{{true}}" send-message-title="临时会话">打开客服会话</button>
 
+                    <!-- 分享 监听 onShareAPPMessage-->
+                    <button type="primary" size="mini" open-type="share" >分享</button>
+
                     <button type="primary" size="mini" open-type="getPhoneNumber" bindgetphonenumber="handleGetPhoneNumber">获取用户手机号（非个人开发者）</button>
                 </view>
             </view>

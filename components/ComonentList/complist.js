@@ -24,12 +24,20 @@ Component({
         chooseUrl:'',
     },
     lifetimes: {
-
+        
     },
     /**
      * 组件的方法列表
      */
     methods: {
+        onShareAppMessage(){ // Page的方法， 组件中这样好像无效
+            console.log('111111111');
+            return {
+                title:"xxxxxxx",
+                path:"/pages/home/home",
+                imageUrl:"/static/images/about.png"
+            }
+        },
         toBottomOrRight(){
             console.log('到最低部或右边了')
         },
@@ -83,5 +91,6 @@ Component({
                     break;
             }
         },
-    }
+       
+    },
 })

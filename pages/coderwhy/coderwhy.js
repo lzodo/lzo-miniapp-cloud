@@ -82,5 +82,60 @@ Page({
     execCpnFunc(){
         const tabControl = this.selectComponent(".codecpn");
         tabControl.CpnFunc(); // 操作组件中的内容
-    }
+    },
+
+    // 获取设备信息
+    onGetSystemInfo(){
+        wx.getSystemInfo({
+            success:(res)=>{
+                console.log(res);
+                console.log(res.screenHeight); // 设备高度
+                console.log(res.windowHeight); // 不包括状态栏和导航
+                // console.log(res);
+            }
+        })
+        // 需要在 app.json permission 授权
+        wx.getLocation({
+          success:(res)=>{
+              console.log(res) //经纬度信息
+          }
+        })
+    },
+    // 本地储存信息
+    setStorageInfo(){
+        wx.setStorage({
+            key:"key1",
+            data:["数组数据"],
+            encrypt:true,// 数据加密
+            success:(res)=>{
+                console.log("储存成功")
+            }
+        });
+
+        // 同步方式
+        // wx.setStorageSync('key2xxx','1234567');
+        // console.log(wx.getStorageSync("key2xxx"));
+        // wx.removeStorageSync('key2xxx');
+        // wx.clearStorageSync();
+    },
+    // 页面跳转
+    onPageChange(){
+        // 跳转tabBar页面 并关闭其他非tabBar页面
+        // wx.switchTab({ 
+        //   url: '/pages/test/test',
+        // })
+
+        // 关闭所有页面，打开程序内的某个页面（经过多个页面时，经过的页面都关闭）
+        // wx.reLaunch({
+        //   url: 'url',
+        // })
+
+        // 保留单前页面，跳转到应用某个页面
+        // wx.navigateTo({
+        //   url: 'url',
+        // })
+
+        // 返回上一个页面
+        wx.navigateBack();
+    },
 })

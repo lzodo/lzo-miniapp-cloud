@@ -76,5 +76,14 @@
  <!-- 组件混入 -->
  <behavior></behavior>
 
-  <!-- 组件什么周期 -->
+  <!-- 组件生命周期 -->
   <lifetime></lifetime>
+
+  <!-- 获取设备信息 onGetSystemInfo -->
+  <button type="primary" size="mini" bindtap="onGetSystemInfo" >获取设备,和位置信息</button>
+
+<!--本地储存 storage -->
+<button type="primary" size="mini" bindtap="setStorageInfo" >本地储存</button>
+
+<!-- 页面跳转 -->
+<button type="primary" size="mini" bindtap="onPageChange" >页面跳转</button>
