@@ -87,3 +87,5 @@
 
 <!-- 页面跳转 -->
 <button type="primary" size="mini" bindtap="onPageChange" >页面跳转</button>
+<!-- <navigator url="/page/xx"></navigator> 直接跳转 -->
+<!-- <navigator open-type="navigateBack"></navigator> 直接返回 -->

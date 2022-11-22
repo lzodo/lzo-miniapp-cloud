@@ -121,7 +121,7 @@ Page({
     // 页面跳转
     onPageChange(){
         // 跳转tabBar页面 并关闭其他非tabBar页面
-        // wx.switchTab({ 
+        // wx.switchTab({  
         //   url: '/pages/test/test',
         // })
 
@@ -131,11 +131,27 @@ Page({
         // })
 
         // 保留单前页面，跳转到应用某个页面
-        // wx.navigateTo({
-        //   url: 'url',
-        // })
+        wx.navigateTo({
+          url: 'url?a=1&b=2', // url 页面 onLoad（options）中获取参数
+          events:{//目标url页面 监听 const ec = this.getOpenerEventChannel(); ec.emit("backxxx",{a:1})
+              backxxx(data){  
+                   // 目标url数据传递到这
+                   console.log(data);
+              }
+          },
+          success:()=>{},
+          fail:()=>{}
+        })
 
         // 返回上一个页面
-        wx.navigateBack();
+        // wx.navigateBack(number); // number 默认 1，最多返回到首页 
+
+        // 给上一个页面传递数据（一般放到onUnload中，系统的返回也能用）
+        // 获取到页面列表
+        const pages = getCurrentPages(); 
+        // 获取上一个页面
+        const prePage = pages[pages.length-2];
+        // 给上一个页面设置设数据
+        prePage.setData({msg:111})
     },
 })
